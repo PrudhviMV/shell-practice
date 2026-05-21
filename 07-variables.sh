@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Today's date is $date"
+echo "Today's date is $(date)"
 
 START_TIME=$(date +%s)
 sleep 15
