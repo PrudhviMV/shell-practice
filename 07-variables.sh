@@ -3,6 +3,7 @@
 echo "Today's date is $date"
 
 START_TIME=$(date +%s)
+sleep 15
 END_TIME=$(date +%s)
 
 TOTAL_TIME=$(($START_TIME-$END_TIME))
