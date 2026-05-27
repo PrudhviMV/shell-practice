@@ -28,25 +28,25 @@ VALIDATE(){
 
 dnf list installed mysql
 if [ $? -eq 0 ]; then
-    echo -e " $G mysql is present on VM, Hence skipping $N. "
-else
     dnf install mysql -y
     VALIDATE $? mysql
+else
+    echo -e " $G mysql is present on VM, Hence skipping $N. "
 fi
 
-dnf install nginx -y
+dnf list installed nginx
 if [ $? -eq 0 ]; then
-    echo -e " $G nginx is present on VM, Hence skipping $N. "
-else
     dnf install nginx -y
-    VALIDATE $? nginx
+    VALIDATE $? nginx 
+else
+    echo -e " $G nginx is present on VM, Hence skipping $N. "
 fi
 
 
-dnf install python -y
+dnf list installed python
 if [ $? -eq 0 ]; then
-    echo -e " $G python is present on VM, Hence skipping $N. "
-else
     dnf install python -y
     VALIDATE $? python
+else
+    echo -e " $G python is present on VM, Hence skipping $N. "
 fi
