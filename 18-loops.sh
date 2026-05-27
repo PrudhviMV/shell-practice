@@ -32,7 +32,7 @@ for package in $@
 do
     #check whether package is installed or not
     dnf list installed $package
-    if [ $? -ne 0]; then
+    if [ $? -ne 0 ]; then
         dnf install $package -y
         VALIDATE $? "$package"
     else
