@@ -43,10 +43,10 @@ else
 fi
 
 
-dnf list installed python
+dnf list installed python3
 if [ $? -ne 0 ]; then
-    dnf install python -y
-    VALIDATE $? python
+    dnf install python3 -y
+    VALIDATE $? python3
 else
-    echo -e " $G python is present on VM, Hence skipping $N. "
+    echo -e " $G python3 is present on VM, Hence skipping $N. "
 fi
