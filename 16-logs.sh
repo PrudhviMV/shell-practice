@@ -18,7 +18,7 @@ if [ $check_root -ne 0 ]; then
     exit 1
 fi
 
-log_dir=$(/var/log/shell-script)
+log_dir="/var/log/shell-script"
 script_name=$(echo "$0" | cut -d "." -f 1 )
 log_file="$log_dir/$script_name.log"
 
